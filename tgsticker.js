@@ -389,7 +389,7 @@ window.RLottie = (function () {
             !data.frames[frameNo] &&
             (!frameNo || ((reqId + frameNo) % data.cachingModulo))) {
             data.frames[frameNo] = {
-                // hash: new Uint8ClampedArray(frame).reduce((a, b) => a + b),
+                hash: new Uint8ClampedArray(frame).reduce((a, b) => a + b),
                 frame: new Uint8ClampedArray(frame),
             };
         }
